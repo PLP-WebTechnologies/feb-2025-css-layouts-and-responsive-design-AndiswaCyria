@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Neon Stay | Student Accommodation</title>
+    <style>
+        :root {
+            --bg-dark: #0f0f1f;
+            --accent: #00ffd5;
+            --neon-purple: #a259ff;
+            --text-light: #f0f0f0;
+            --card-bg: #1a1a2e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #111;
+            color: var(--accent);
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--neon-purple);
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--neon-purple);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        nav ul li a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--neon-purple);
+        }
+
+        .hero {
+            padding: 3rem 2rem;
+            text-align: center;
+            background: linear-gradient(145deg, #1f1f3a, #0e0e1a);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem 1rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--neon-purple);
+            border-radius: 10px;
+            padding: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            color: var(--neon-purple);
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: #aaa;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid var(--accent);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 2rem;
+            justify-content: center;
+            background: #121224;
+        }
+
+        .testimonial {
+            flex: 1 1 300px;
+            border: 1px solid var(--accent);
+            border-radius: 10px;
+            padding: 1rem;
+            background-color: #1d1d30;
+        }
+
+        .testimonial h4 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .partners {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .partner {
+            background: #1d1d30;
+            padding: 1rem 2rem;
+            border: 1px solid var(--neon-purple);
+            border-radius: 8px;
+            font-weight: bold;
+            color: var(--text-light);
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: #111;
+            color: var(--text-light);
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            margin-left: 0.5rem;
+        }
+
+        footer a:hover {
+            color: var(--neon-purple);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Live Well Student Accommodation</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Premium Student Living in Durban</h1>
+        <p>Modern, affordable accommodation minutes from DUT and UKZN.</p>
+    </section>
+
+    <div class="container">
+        <div class="card">
+            <h3>Single Room</h3>
+            <p>R 4,500</p>
+        </div>
+        <div class="card">
+            <h3>Double Room</h3>
+            <p>R 3,500</p>
+        </div>
+        <div class="card">
+            <h3>Shared Room</h3>
+            <p>R 2,500</p>
+        </div>
+    </div>
+
+    <section class="gallery">
+        <h2 style="text-align: center; color: var(--accent);">Gallery</h2>
+        <div>
+            <img src="https://images.pexels.com/photos/4115551/pexels-photo-4115551.jpeg" alt="Room 1">
+            <img src="https://images.pexels.com/photos/7746077/pexels-photo-7746077.jpeg" alt="Room 2">
+            <img src="https://images.pexels.com/photos/10660335/pexels-photo-10660335.jpeg" alt="Room 3">
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="testimonial">
+            <p>"I love living here! The staff are friendly and the location is perfect."</p>
+            <h4>- Student A</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Great facilities and a vibrant community. Highly recommend!"</p>
+            <h4>- Student B</h4>
+        </div>
+    </section>
+
+    <footer>
+        <div>&copy; 2025 Neon Stay</div>
+        <div>
+            Follow us on:
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
